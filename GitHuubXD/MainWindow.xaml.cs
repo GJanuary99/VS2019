@@ -28,20 +28,23 @@ namespace GitHuubXD
         public MainWindow()
         {
             InitializeComponent();
-            var mySerializer = new XmlSerializer(typeof(List<Person>));
-            var myFileStream = new FileStream("../../xml/sertest.xml", FileMode.Open);
-            PersonList = (List<Person>)mySerializer.Deserialize(myFileStream);
-            ListViewXAML.ItemsSource = PersonList;
-            window1.Show();
+
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             XmlSerializer ser = new XmlSerializer(typeof(List<Person>));
-
-            using (FileStream fs = new FileStream("../../xml/sertest.xml", FileMode.Create))
+            try
             {
-                ser.Serialize(fs, PersonList);
+                using (FileStream fs = new FileStream("../../xml/sertest.xml", FileMode.Create))
+                {
+                    ser.Serialize(fs, PersonList);
+                }
+            }
+            catch (Exception blad)
+            {
+                MessageBox.Show(blad.Message);
             }
         }
 
@@ -69,6 +72,24 @@ namespace GitHuubXD
             public string Adress { get; set; }
         }
 
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            window1.Show();
+        }
 
+        private void Load(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var mySerializer = new XmlSerializer(typeof(List<Person>));
+                var myFileStream = new FileStream("../../xml/sertest.xml", FileMode.Open);
+                PersonList = (List<Person>)mySerializer.Deserialize(myFileStream);
+                ListViewXAML.ItemsSource = PersonList;
+            }
+            catch (Exception blad)
+            {
+                MessageBox.Show(blad.Message);
+            }
+        }
     }
 }

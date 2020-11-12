@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHub\\GitHuubXD\\GitHuubXD.csproj",
+      "projectUniqueName": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHubpublic\\GitHuubXD\\GitHuubXD.csproj",
       "projectName": "GitHuubXD",
-      "projectPath": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHub\\GitHuubXD\\GitHuubXD.csproj",
+      "projectPath": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHubpublic\\GitHuubXD\\GitHuubXD.csproj",
       "packagesPath": "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHub\\GitHuubXD\\obj\\",
+      "outputPath": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHubpublic\\GitHuubXD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Grzegorz Kielian\\AppData\\Roaming\\NuGet\\NuGet.Config",

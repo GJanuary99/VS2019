@@ -11,7 +11,14 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="0" Name="ListViewXAML" Margin="10" BorderBrush="Black" PreviewMouseLeftButtonUp="listView_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="0" Grid.ColumnSpan="5" Name="ListViewXAML" Margin="10" BorderBrush="Black" PreviewMouseLeftButtonUp="listView_Click">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
@@ -20,7 +27,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Save" Click="Button_Click" Grid.Row="1" Width="100" Height="50"/>
-        <Button Content="Refresh" Click="Refreshwindow" Grid.Row="1" Width="100" Height="50" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+        <Button Content="Save" Click="Button_Click" Grid.Row="1" Grid.Column="2" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Refresh" Click="Refreshwindow" Grid.Row="1" Grid.Column="3" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Add" Click="Add" Grid.Row="1" Grid.Column="4" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button Content="Load" Click="Load" Grid.Row="1" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

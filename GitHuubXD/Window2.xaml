@@ -40,7 +40,7 @@
         <Label Content="City:" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26"/>
         <Label Content="Adress:" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26"/>
 
-        <Button Content="Modify" Grid.Column="1" Grid.Row="5" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Modify"/>
+        <Button Content="Modify" Grid.Column="1" Grid.Row="5" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Modify"/>
         <Label Name="x" Visibility="Hidden"></Label>
     </Grid>
 </Window>
