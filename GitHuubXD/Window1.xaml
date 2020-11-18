@@ -37,7 +37,9 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
         <TextBox Grid.Row="4" Grid.Column="1" BorderBrush="Black" Name="Adress" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
-        
-        <Button Grid.Row="5" Grid.Column="1" Content="Dodaj" Margin="0,10"  Click="Button_Click" />
+
+        <Button Grid.Row="5" Grid.Column="1" Content="Add" Margin="0,10"  Click="Button_Click" />
+        <Button Grid.Row="5" Grid.Column="2" Content="Image" Margin="0,10"  Click="Img_Click" />
+        <Image Name="ImgFile" Grid.Row="5" Grid.Column="0" />
     </Grid>
 </Window>

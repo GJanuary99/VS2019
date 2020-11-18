@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,34 +18,37 @@ using System.Xml.Serialization;
 
 namespace GitHuubXD
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         [XmlArray("DataGridXAML"), XmlArrayItem(typeof(List<Person>), ElementName = "Person")]
         public static List<Person> PersonList = new List<Person>();
-        Window1 window1 = new Window1();
+
         public MainWindow()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent(); 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+  
+        private void Save(object sender, RoutedEventArgs e)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(List<Person>));
-            try
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
             {
-                using (FileStream fs = new FileStream("../../xml/sertest.xml", FileMode.Create))
+                saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
+                saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                if (saveFileDialog.ShowDialog() == true)
                 {
-                    ser.Serialize(fs, PersonList);
+                    XmlSerializer ser = new XmlSerializer(typeof(List<Person>));
+                    try
+                    {
+                        using (FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                        {
+                            ser.Serialize(fs, PersonList);
+                        }
+                    }
+                    catch (Exception blad)
+                    {
+                        MessageBox.Show(blad.Message);
+                    }
                 }
-            }
-            catch (Exception blad)
-            {
-                MessageBox.Show(blad.Message);
             }
         }
 
@@ -70,25 +74,40 @@ namespace GitHuubXD
             public string Pesel { get; set; }
             public string City { get; set; }
             public string Adress { get; set; }
+            [XmlIgnore()]
+            public BitmapImage Img { get; set; }
+            [XmlElement("Imgxml")]
+            public string imgxml { get { return Img.UriSource.ToString(); } set { Img = new BitmapImage(new Uri(value)); } }
         }
 
         private void Add(object sender, RoutedEventArgs e)
         {
+            Window1 window1 = new Window1();
             window1.Show();
         }
 
         private void Load(object sender, RoutedEventArgs e)
         {
-            try
+            OpenFileDialog openFileDialog = new OpenFileDialog();
             {
-                var mySerializer = new XmlSerializer(typeof(List<Person>));
-                var myFileStream = new FileStream("../../xml/sertest.xml", FileMode.Open);
-                PersonList = (List<Person>)mySerializer.Deserialize(myFileStream);
-                ListViewXAML.ItemsSource = PersonList;
-            }
-            catch (Exception blad)
-            {
-                MessageBox.Show(blad.Message);
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+                openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    try
+                    {
+                        var mySerializer = new XmlSerializer(typeof(List<Person>));
+                        var myFileStream = new FileStream(openFileDialog.FileName, FileMode.Open);
+                        PersonList = (List<Person>)mySerializer.Deserialize(myFileStream);
+                        ListViewXAML.ItemsSource = PersonList;
+                    }
+                    catch (Exception blad)
+                    {
+                        MessageBox.Show(blad.Message);
+                    }
+                }
             }
         }
     }

@@ -26,7 +26,7 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
         <TextBox Grid.Column="1" Grid.Row="1" BorderBrush="Black" Name="Surname" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
-        <TextBox Grid.Column="1" Grid.Row="2" BorderBrush="Black" Name="Pesel" Grid.ColumnSpan="2"
+        <TextBox Grid.Column="1" Grid.Row="2" BorderBrush="Black" Name="Pesel" Grid.ColumnSpan="2" MaxLength="11"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
         <TextBox Grid.Column="1" Grid.Row="3" BorderBrush="Black" Name="City" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
@@ -42,5 +42,7 @@
 
         <Button Content="Modify" Grid.Column="1" Grid.Row="5" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Modify"/>
         <Label Name="x" Visibility="Hidden"></Label>
+        <Button Grid.Row="5" Grid.Column="2" Content="Image" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Img_Click" />
+        <Image Name="ImgFile" Grid.Row="5" Grid.Column="0" />
     </Grid>
 </Window>

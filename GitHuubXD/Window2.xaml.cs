@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -27,6 +28,7 @@ namespace GitHuubXD
             Pesel.Text = MainWindow.PersonList[klucz].Pesel;
             City.Text = MainWindow.PersonList[klucz].City;
             Adress.Text = MainWindow.PersonList[klucz].Adress;
+            ImgFile.Source = MainWindow.PersonList[klucz].Img;
             x.Content = klucz;
         }
 
@@ -37,7 +39,26 @@ namespace GitHuubXD
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Pesel = Pesel.Text;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].City = City.Text;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Adress = Adress.Text;
+            MainWindow.PersonList[Convert.ToInt32(x.Content)].Img = (BitmapImage)ImgFile.Source;
             this.Close();
+        }
+        private void Img_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            {
+                string filePath;
+                openFileDialog.InitialDirectory = Environment.CurrentDirectory;
+                openFileDialog.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    filePath = openFileDialog.FileName;
+                    Uri uri1 = new Uri(filePath);
+                    ImgFile.Source = new BitmapImage(uri1);
+                }
+            }
         }
     }
 }

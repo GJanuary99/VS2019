@@ -24,10 +24,12 @@
                     <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
                     <GridViewColumn Header="Surname" Width="100" DisplayMemberBinding="{Binding Surname}"></GridViewColumn>
                     <GridViewColumn Header="PESEL" Width="100" DisplayMemberBinding="{Binding Pesel}"></GridViewColumn>
+                    <GridViewColumn Header="Image" Width="100" DisplayMemberBinding="{Binding Img}"></GridViewColumn>
+
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Save" Click="Button_Click" Grid.Row="1" Grid.Column="2" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Save" Click="Save" Grid.Row="1" Grid.Column="2" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Content="Refresh" Click="Refreshwindow" Grid.Row="1" Grid.Column="3" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Content="Add" Click="Add" Grid.Row="1" Grid.Column="4" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <Button Content="Load" Click="Load" Grid.Row="1" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
