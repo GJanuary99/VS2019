@@ -3,9 +3,9 @@
   <Person>
     <Name>Jan</Name>
     <Surname>Kowalski</Surname>
-    <Pesel>12121212121</Pesel>
+    <Pesel>11</Pesel>
     <City>Warsaw</City>
     <Adress>Pilsudskiego</Adress>
-    <Imgxml>file:///C:/Users/Grzegorz Kielian/Desktop/Studia semestr III/Programowanie 3/GitHubpublic/GitHuubXD/img/sign.png</Imgxml>
+    <Imgxml>file:///C:/Users/Grzegorz Kielian/Desktop/Studia semestr III/Programowanie 3/GitHubpublic/GitHuubXD/bin/img/monogram.png</Imgxml>
   </Person>
 </ArrayOfPerson>

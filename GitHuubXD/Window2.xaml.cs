@@ -25,7 +25,7 @@ namespace GitHuubXD
             InitializeComponent();
             Name.Text = MainWindow.PersonList[klucz].Name;
             Surname.Text = MainWindow.PersonList[klucz].Surname;
-            Pesel.Text = MainWindow.PersonList[klucz].Pesel;
+            Pesel.CaretIndex= MainWindow.PersonList[klucz].Pesel;
             City.Text = MainWindow.PersonList[klucz].City;
             Adress.Text = MainWindow.PersonList[klucz].Adress;
             ImgFile.Source = MainWindow.PersonList[klucz].Img;
@@ -36,7 +36,7 @@ namespace GitHuubXD
         {
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Name = Name.Text;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Surname = Surname.Text;
-            MainWindow.PersonList[Convert.ToInt32(x.Content)].Pesel = Pesel.Text;
+            MainWindow.PersonList[Convert.ToInt32(x.Content)].Pesel = Pesel.CaretIndex;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].City = City.Text;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Adress = Adress.Text;
             MainWindow.PersonList[Convert.ToInt32(x.Content)].Img = (BitmapImage)ImgFile.Source;

@@ -24,8 +24,8 @@
                     <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
                     <GridViewColumn Header="Surname" Width="100" DisplayMemberBinding="{Binding Surname}"></GridViewColumn>
                     <GridViewColumn Header="PESEL" Width="100" DisplayMemberBinding="{Binding Pesel}"></GridViewColumn>
-                    <GridViewColumn Header="Image" Width="100" DisplayMemberBinding="{Binding Img}"></GridViewColumn>
-
+                    <!--?<GridViewColumn Header="Image" Width="100" DisplayMemberBinding="{Binding Img}"></GridViewColumn>
+                        -->
                 </GridView>
             </ListView.View>
         </ListView>

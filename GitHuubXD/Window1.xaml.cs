@@ -19,7 +19,7 @@ namespace GitHuubXD
     {
         private string namefield;
         private string surnamefield;
-        private string peselfield;
+        private int peselfield;
         private string cityfield;
         private string adressfield;
         private BitmapImage imageyes;
@@ -32,7 +32,7 @@ namespace GitHuubXD
         {
             namefield = Name.Text;
             surnamefield = Surname.Text;
-            peselfield = Pesel.Text;
+            peselfield = Pesel.CaretIndex;
             cityfield = City.Text;
             adressfield = Adress.Text;
             
