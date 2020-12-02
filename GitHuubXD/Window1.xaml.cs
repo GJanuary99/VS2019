@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,6 +18,7 @@ namespace GitHuubXD
 
     public partial class Window1 : Window
     {
+
         private string namefield;
         private string surnamefield;
         private int peselfield;
@@ -35,15 +37,16 @@ namespace GitHuubXD
             peselfield = Pesel.CaretIndex;
             cityfield = City.Text;
             adressfield = Adress.Text;
-            
+
             try
             {
                 MainWindow.PersonList.Add(new MainWindow.Person() { Name = namefield, Surname = surnamefield, Pesel = peselfield, City = cityfield, Adress = adressfield, Img = imageyes });
             }
-            catch(Exception blad)
+            catch (Exception blad)
             {
                 MessageBox.Show(blad.Message);
             }
+
         }
 
         private void Img_Click(object sender, RoutedEventArgs e)
@@ -64,6 +67,22 @@ namespace GitHuubXD
                     ImgFile.Source = new BitmapImage(uri1);
                     imageyes = new BitmapImage(uri1);
                 }
+            }
+        }
+
+        private void CheckText(object sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.IsMatch(e.Text, @"^\p{L}"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CheckPesel(object sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.IsMatch(e.Text, @"^\p{N}"))
+            {
+                e.Handled = true;
             }
         }
     }

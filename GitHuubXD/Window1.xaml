@@ -20,7 +20,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Label Grid.Row="0" Grid.Column="0" Content="Name:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Grid.Row="1" Grid.Column="0" Content="Surname:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Grid.Row="2" Grid.Column="0" Content="Pesel:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -28,11 +28,11 @@
         <Label Grid.Row="4" Grid.Column="0" Content="Adress:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Black" Name="Name" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckText"/>
         <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Black" Name="Surname" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckText"/>
         <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Black" Name="Pesel" Grid.ColumnSpan="2" MaxLength="11"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckPesel"/>
         <TextBox Grid.Row="3" Grid.Column="1" BorderBrush="Black" Name="City" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
         <TextBox Grid.Row="4" Grid.Column="1" BorderBrush="Black" Name="Adress" Grid.ColumnSpan="2"

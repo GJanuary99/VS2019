@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace GitHuubXD
 {
@@ -60,5 +61,24 @@ namespace GitHuubXD
                 }
             }
         }
+
+        private void CheckText(object sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.IsMatch(e.Text, @"^\p{L}"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CheckPesel(object sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.IsMatch(e.Text, @"^\p{N}"))
+            {
+                e.Handled = true;
+            }
+        }
+
+        
+
     }
 }
