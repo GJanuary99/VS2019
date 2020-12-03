@@ -71,7 +71,7 @@ namespace GitHuubXD
         {
             public string Name { get; set; }
             public string Surname { get; set; }
-            public int Pesel { get; set; }
+            public string Pesel { get; set; }
             public string City { get; set; }
             public string Adress { get; set; }
             [XmlIgnore()]

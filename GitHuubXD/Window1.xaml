@@ -27,18 +27,22 @@
         <Label Grid.Row="3" Grid.Column="0" Content="City:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Grid.Row="4" Grid.Column="0" Content="Adress:" FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Black" Name="Name" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckText"/>
-        <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Black" Name="Surname" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckText"/>
-        <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Black" Name="Pesel" Grid.ColumnSpan="2" MaxLength="11"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckPesel"/>
-        <TextBox Grid.Row="3" Grid.Column="1" BorderBrush="Black" Name="City" Grid.ColumnSpan="2"
+        <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="Black" Name="Name" Grid.ColumnSpan="2" PreviewTextInput="CheckLetters"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"  TextChanged="CheckName"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" BorderBrush="Black" Name="Surname" Grid.ColumnSpan="2" PreviewTextInput="CheckLetters"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" TextChanged="CheckSurname"/>
+        
+        <TextBox Grid.Row="2" Grid.Column="1" BorderBrush="Black" Name="Pesel" Grid.ColumnSpan="2" MaxLength="11" PreviewTextInput="CheckNumbers"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" TextChanged="CheckPesel"/>
+
+        <TextBox Grid.Row="3" Grid.Column="1" BorderBrush="Black" Name="City" Grid.ColumnSpan="2" PreviewTextInput="CheckLetters"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
+
         <TextBox Grid.Row="4" Grid.Column="1" BorderBrush="Black" Name="Adress" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
 
-        <Button Grid.Row="5" Grid.Column="1" Content="Add" Margin="0,10"  Click="Button_Click" />
+        <Button x:Name="AddButton" Grid.Row="5" Grid.Column="1" Content="Add" Margin="0,10"  Click="Button_Click" />
         <Button Grid.Row="5" Grid.Column="2" Content="Image" Margin="0,10"  Click="Img_Click" />
         <Image Name="ImgFile" Grid.Row="5" Grid.Column="0" />
     </Grid>

@@ -22,14 +22,18 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.Column="1" Grid.Row="0" BorderBrush="Black" x:Name="Name" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"  PreviewTextInput="CheckText"/>
-        <TextBox Grid.Column="1" Grid.Row="1" BorderBrush="Black" x:Name="Surname" Grid.ColumnSpan="2"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckText"/>
-        <TextBox Grid.Column="1" Grid.Row="2" BorderBrush="Black" x:Name="Pesel" Grid.ColumnSpan="2" MaxLength="11"
-                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckPesel"/>
-        <TextBox Grid.Column="1" Grid.Row="3" BorderBrush="Black" Name="City" Grid.ColumnSpan="2"
+        <TextBox Grid.Column="1" Grid.Row="0" BorderBrush="Black" x:Name="Name" Grid.ColumnSpan="2" TextChanged="CheckName"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckLetters"/>
+
+        <TextBox Grid.Column="1" Grid.Row="1" BorderBrush="Black" x:Name="Surname" Grid.ColumnSpan="2" TextChanged="CheckSurname"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckLetters"/>
+
+        <TextBox Grid.Column="1" Grid.Row="2" BorderBrush="Black" x:Name="Pesel" Grid.ColumnSpan="2" MaxLength="11" TextChanged="CheckPesel"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220" PreviewTextInput="CheckNumbers"/>
+
+        <TextBox Grid.Column="1" Grid.Row="3" BorderBrush="Black" Name="City" Grid.ColumnSpan="2" PreviewTextInput="CheckLetters"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
+        
         <TextBox Grid.Column="1" Grid.Row="4" BorderBrush="Black" Name="Adress" Grid.ColumnSpan="2"
                  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" Width="220"/>
 
@@ -40,7 +44,7 @@
         <Label Content="City:" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26"/>
         <Label Content="Adress:" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26"/>
 
-        <Button Content="Modify" Grid.Column="1" Grid.Row="5" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Modify" ></Button>
+        <Button x:Name="ModifyButton" Content="Modify" Grid.Column="1" Grid.Row="5" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Modify" ></Button>
         <Label Name="x" Visibility="Hidden"></Label>
         <Button Grid.Row="5" Grid.Column="2" Content="Image" Width="100" Height="50" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Img_Click" />
         <Image Name="ImgFile" Grid.Row="5" Grid.Column="0" />
