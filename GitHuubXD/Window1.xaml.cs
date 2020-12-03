@@ -122,12 +122,12 @@ namespace GitHuubXD
             }
         }
 
-        private void CheckLetters(object sender, TextCompositionEventArgs e)
+        private void CheckLetters(object sender, TextCompositionEventArgs e) //dodatkowe dla liter
         {
             if (!Regex.IsMatch(e.Text, @"^\p{L}"))
                 e.Handled = true;
         }
-        private void CheckNumbers(object sender, TextCompositionEventArgs e)
+        private void CheckNumbers(object sender, TextCompositionEventArgs e) //dodatkowe dla cyfr
         {
             if (!Regex.IsMatch(e.Text, @"^\p{N}"))
                 e.Handled = true;
