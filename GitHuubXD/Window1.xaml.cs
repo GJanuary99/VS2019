@@ -26,6 +26,8 @@ namespace GitHuubXD
         private string adressfield;
         private BitmapImage imageyes;
 
+        private readonly string end = "5";
+
         string tmpPesel;
         string tmpSurname;
         string tmpName;
@@ -112,10 +114,10 @@ namespace GitHuubXD
             string input = (sender as TextBox).Text;
             if (Name.Text.Length > 1)
             {
-                if (!Regex.IsMatch(input, @"^[A-Z]{1}[a-z]{1,81}$"))//najdluzsze imie liczy 81znakow, najkrotsze 1 znak
+                if (!Regex.IsMatch(input, @"^[A-Z]{1}[a-z]{1,"+end+"}$"))//najdluzsze imie liczy 81znakow, najkrotsze 1 znak
                 {
 
-                    MessageBox.Show("Pole Imie ma limit ustawiony na 50 znakow. \nNie moze zawierac znakow specjalnych i cyfr.\nMusi zaczynac sie z duzej litery");
+                    MessageBox.Show("Pole Imie ma limit ustawiony na "+end+" znakow. \nNie moze zawierac znakow specjalnych i cyfr.\nMusi zaczynac sie z duzej litery");
                     Name.Text = tmpName;
                 }
                 tmpName = Name.Text;
