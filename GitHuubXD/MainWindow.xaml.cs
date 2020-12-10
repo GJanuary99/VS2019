@@ -110,5 +110,15 @@ namespace GitHuubXD
                 }
             }
         }
+
+        private void Add_to_Base(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Load_from_Base(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
