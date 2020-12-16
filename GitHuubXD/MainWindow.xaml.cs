@@ -118,7 +118,8 @@ namespace GitHuubXD
 
         private void Load_from_Base(object sender, RoutedEventArgs e)
         {
-
+            Window3 window3 = new Window3();
+            window3.Show();
         }
     }
 }

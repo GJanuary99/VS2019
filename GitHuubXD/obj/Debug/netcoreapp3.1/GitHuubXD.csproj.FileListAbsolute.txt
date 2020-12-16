@@ -44,3 +44,12 @@ C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpubli
 C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\GitHuubXD.dll
 C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\GitHuubXD.pdb
 C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\GitHuubXD.genruntimeconfig.cache
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\Window3.g.cs
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\Window3.baml
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Grzegorz Kielian\Desktop\Studia semestr III\Programowanie 3\GitHubpublic\GitHuubXD\obj\Debug\netcoreapp3.1\GitHuubXD.csproj.CopyComplete

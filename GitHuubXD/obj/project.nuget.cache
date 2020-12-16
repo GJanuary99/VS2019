@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Ue3A5nMS5aF6oaTqxnlIN/s+/vW64GPOii28ZMm4Z8Wvgs7KjoBPE45eyLYB8PuvxvKXK1O8TvbB4BFer7yjTQ==",
+  "dgSpecHash": "f7QRepv+Mg5b1v00HeanEezBznqpG1ybvsD87/iCZuYKe0299CBdI50bandmzjfswS3Y/oCKNx2zlQgtAdBSUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Grzegorz Kielian\\Desktop\\Studia semestr III\\Programowanie 3\\GitHubpublic\\GitHuubXD\\GitHuubXD.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Grzegorz Kielian\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
