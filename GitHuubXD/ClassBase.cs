@@ -52,5 +52,17 @@ namespace GitHuubXD
             }
 
         }
+
+        public static void addBase()
+        {
+            try
+            { 
+                
+            }
+            catch (Exception blad)
+            { 
+                MessageBox.Show(blad.Message); 
+            }
+        }
     }
 }
