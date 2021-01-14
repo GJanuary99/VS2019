@@ -37,7 +37,7 @@ namespace GitHuubXD
                 openConnection();
                 command = new SqlCommand();
 
-                command.CommandText = "SELECT [Index], [Surname], [Name], [Age], [Pesel] FROM PersonList";
+                command.CommandText = "SELECT [Name], [Surname], [Pesel], [City], [Adress] FROM PersonList";
                 command.CommandType = CommandType.Text;
                 command.Connection = cnn;
 
@@ -53,11 +53,20 @@ namespace GitHuubXD
 
         }
 
-        public static void addBase()
+        public static void addBase(string update)
         {
             try
-            { 
-                
+            {
+                openConnection();
+                command = new SqlCommand();
+                command.CommandText = update;
+                command.CommandType = CommandType.Text;
+                command.Connection = cnn;
+                adapter = new SqlDataAdapter(command);
+                dataTable = new DataTable("PersonList");
+                adapter.Fill(dataTable);
+                closeConnection();
+
             }
             catch (Exception blad)
             { 

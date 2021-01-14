@@ -1,0 +1,78 @@
+﻿<Window x:Class="Kartka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kartka"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="550">
+    <Window.Resources>
+
+        
+        <ImageBrush x:Key="MyImageBrush" ImageSource="C:/Users/Grzegorz Kielian/Desktop/Studia semestr III/Programowanie 3/GitHubpublic/Kartka/img/bg.png"></ImageBrush>
+        <Style TargetType="local:MainWindow">
+            <Setter Property="Background" Value="{StaticResource MyImageBrush}"></Setter>
+            <Setter Property="BorderBrush" Value="Gray"></Setter>
+            <Setter Property="BorderThickness" Value="20"></Setter>
+        </Style>
+
+        <!-- styl dla textblockow -->
+        <Style x:Key="Christmas" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="OrangeRed"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+
+        <!-- styl pochodny -->
+        <Style x:Key="Christmas_insc" TargetType="TextBlock" BasedOn="{StaticResource Christmas}">
+            <Setter Property="FontSize" Value="44"></Setter>
+        </Style>
+
+        <!-- styl dla wiekszosci -->
+        <Style x:Key="ControlBaseStyle" TargetType="Control">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="FontSize" Value="44"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+
+        <!-- swiatelka -->
+        <Style TargetType="RadioButton">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="RadioButton.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard BeginTime="00:00:00" RepeatBehavior="Forever" AutoReverse="True"
+                                                        Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)">
+                                <ColorAnimation From="Blue" To="Orange" Duration="0:0:2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <TextBlock Style="{StaticResource Christmas_insc}" Margin="20">Wesołych Świąt</TextBlock>
+        
+        <Button Style="{StaticResource ControlBaseStyle}" HorizontalAlignment="Left" Background="orange" Foreground="Yellow">*</Button>
+        <Label Style="{StaticResource ControlBaseStyle}" HorizontalAlignment="right" Background="MediumSeaGreen" Foreground="BlueViolet">#</Label>
+        <Canvas>
+            <RadioButton Canvas.Top="120" Canvas.Left="140"></RadioButton>
+            <RadioButton Canvas.Top="150" Canvas.Left="200"></RadioButton>
+            <RadioButton Canvas.Top="180" Canvas.Left="260"></RadioButton>
+
+            <RadioButton Canvas.Top="320" Canvas.Left="140"></RadioButton>
+            <RadioButton Canvas.Top="280" Canvas.Left="230"></RadioButton>
+            <RadioButton Canvas.Top="240" Canvas.Left="300"></RadioButton>
+
+            <RadioButton Canvas.Top="420" Canvas.Left="140"></RadioButton>
+            <RadioButton Canvas.Top="460" Canvas.Left="230"></RadioButton>
+            <RadioButton Canvas.Top="500" Canvas.Left="340"></RadioButton>
+        </Canvas>
+    </Grid>
+</Window>

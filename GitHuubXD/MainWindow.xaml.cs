@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace GitHuubXD
 {
@@ -111,12 +113,7 @@ namespace GitHuubXD
             }
         }
 
-        private void Add_to_Base(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Load_from_Base(object sender, RoutedEventArgs e)
+        private void Base(object sender, RoutedEventArgs e)
         {
             Window3 window3 = new Window3();
             window3.Show();

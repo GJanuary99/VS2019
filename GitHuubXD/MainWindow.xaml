@@ -33,7 +33,6 @@
         <Button Content="Refresh" Click="Refreshwindow" Grid.Row="1" Grid.Column="3" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Content="Add" Click="Add" Grid.Row="1" Grid.Column="4" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <Button Content="Load" Click="Load" Grid.Row="1" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button Content="Add to Base" Click="Add_to_Base" Grid.Row="1" Grid.Column="0" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Button Content="Load from Base" Click="Load_from_Base" Grid.Row="1" Grid.Column="0" Width="100" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <Button Content="DataBase" Click="Base" Grid.Row="1" Grid.Column="0" Width="100" Height="50"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

@@ -8,8 +8,23 @@
         Title="Window3" Height="450" Width="800"
         Loaded="Window_Loaded">
     <Grid>
-        <WrapPanel>
-            <DataGrid Name="myDataGrid" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="True" ></DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel  Grid.RowSpan="6" Grid.Column="0" >
+            <DataGrid Name="myDataGrid" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="True"></DataGrid>
         </WrapPanel>
+        <Button Content="Save" Click="SaveToBase" Grid.Column="1" Grid.Row="5" Margin="20"/>
+        <Button Content="1" Grid.Column="1" Grid.Row="1" Margin="20"/>
+        <Button Content="2" Grid.Column="1" Grid.Row="2" Margin="20"/>
     </Grid>
 </Window>
